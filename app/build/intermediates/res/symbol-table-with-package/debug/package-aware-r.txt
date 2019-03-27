@@ -704,7 +704,6 @@ id collapseActionView
 id constraintLayout
 id content
 id contentPanel
-id countPagesTextView
 id custom
 id customPanel
 id dateTextView

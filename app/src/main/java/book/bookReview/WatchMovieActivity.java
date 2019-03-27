@@ -41,7 +41,6 @@ public class WatchMovieActivity extends AppCompatActivity implements YouTubePlay
         String author = intent.getStringExtra("author");
         String image = intent.getStringExtra("image");
         int date = intent.getIntExtra("date", 0);
-        int countPages = intent.getIntExtra("countPages", 0);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -56,14 +55,12 @@ public class WatchMovieActivity extends AppCompatActivity implements YouTubePlay
         TextView descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
         ImageView imageView = (ImageView) findViewById(R.id.movieImage);
         TextView dateTextView = (TextView) findViewById(R.id.dateTextView);
-        TextView countPagesTextView = (TextView) findViewById(R.id.countPagesTextView);
 
         nameTextView.setText(name);
         authorTextView.setText("Автор: " + author);
         descriptionTextView.setText(description);
         Picasso.get().load(image).into(imageView);
         dateTextView.setText(date + " год публикации");
-        countPagesTextView.setText(countPages + " страниц");
 
 //        VideoView videoView = (VideoView) findViewById(R.id.videoView);
 //        String uriPath = intent.getStringExtra("url");

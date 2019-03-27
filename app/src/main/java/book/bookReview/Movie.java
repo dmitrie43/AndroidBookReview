@@ -3,9 +3,9 @@ package book.bookReview;
 //Класс для записи и вывода данных
 class Movie {
     private String name, description, author, image, url;
-    private int date, countPages;
+    private int date;
 
-    Movie(String name, String description, String author, String image, String url, int date, int countPages) {
+    Movie(String name, String description, String author, String image, String url, int date) {
         super();
         this.name = name;
         this.description = description;
@@ -13,7 +13,6 @@ class Movie {
         this.image = image;
         this.url = url;
         this.date = date;
-        this.countPages = countPages;
     }
 
     String getName() {
@@ -38,5 +37,4 @@ class Movie {
 
     int getDate() { return this.date; }
 
-    int getCountPages() { return this.countPages; }
 }

@@ -55,7 +55,6 @@ class MovieAdapter extends BaseAdapter {
         TextView author = (TextView) convertView.findViewById(R.id.authorTextView);
         ImageView image = (ImageView) convertView.findViewById(R.id.imageView);
         TextView date = (TextView) convertView.findViewById(R.id.dateTextView);
-        TextView countPages = (TextView) convertView.findViewById(R.id.countPagesTextView);
 
         final Movie movie = getItem(position);
         name.setText(movie.getName());
@@ -66,7 +65,6 @@ class MovieAdapter extends BaseAdapter {
         }
         author.setText("Автор: " + movie.getAuthor());
         date.setText("Год публикации: " + movie.getDate());
-        countPages.setText(movie.getCountPages() + " страниц");
 
 
         Picasso.get().load(movie.getImage()).into(image);
@@ -81,7 +79,6 @@ class MovieAdapter extends BaseAdapter {
                 intent.putExtra("image", movie.getImage());
                 intent.putExtra("url", movie.getUrl());
                 intent.putExtra("date", movie.getDate());
-                intent.putExtra("countPages", movie.getCountPages());
 
                 activity.startActivity(intent);
             }
